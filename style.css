@@ -6,35 +6,39 @@
 }
 
 
-/* =====================
+/* =========================
    LIGHT THEME
-===================== */
+========================= */
 
 :root {
 
-    --background: #0B3D2E;
-    --section: #145A43;
-    --card: #174F3B;
-    --text: #F8F8F3;
-    --gold: #C6A15B;
-    --shadow: rgba(0,0,0,0.35);
+    --background: #ffffff;
+    --section: #f6f6f6;
+    --card: #ffffff;
+    --text: #111111;
+    --muted: #555555;
+    --border: #dddddd;
+    --accent: #C6A15B;
+    --shadow: rgba(0,0,0,0.08);
 
 }
 
 
 
-/* =====================
+/* =========================
    DARK THEME
-===================== */
+========================= */
 
 .dark-mode {
 
-    --background: #061A2E;
-    --section: #0D2945;
-    --card: #102F4F;
-    --text: #F5F5F5;
-    --gold: #C8CDD3;
-    --shadow: rgba(0,0,0,0.5);
+    --background: #050505;
+    --section: #0d0d0d;
+    --card: #111111;
+    --text: #ffffff;
+    --muted: #bbbbbb;
+    --border: #333333;
+    --accent: #C8CDD3;
+    --shadow: rgba(255,255,255,0.05);
 
 }
 
@@ -50,9 +54,9 @@ body {
 
 
 
-/* =====================
+/* =========================
    HEADER
-===================== */
+========================= */
 
 
 header {
@@ -61,10 +65,11 @@ header {
     justify-content:space-between;
     align-items:center;
     padding:25px 8%;
-    background:rgba(0,0,0,0.18);
-    backdrop-filter:blur(10px);
+    background:var(--card);
+    border-bottom:1px solid var(--border);
 
 }
+
 
 
 
@@ -72,20 +77,15 @@ header {
 
     font-size:38px;
     font-weight:900;
-    letter-spacing:2px;
+    letter-spacing:3px;
 
 }
 
 
 
-/* LOGO COLOURS */
-
-
 .finance {
 
-    color:#0B3D2E;
-    -webkit-text-stroke:1.5px #C6A15B;
-    text-shadow:0 0 10px rgba(198,161,91,0.5);
+    color:#111111;
 
 }
 
@@ -93,7 +93,6 @@ header {
 .path {
 
     color:#C6A15B;
-    text-shadow:0 0 10px rgba(198,161,91,0.5);
 
 }
 
@@ -104,9 +103,7 @@ header {
 
 .dark-mode .finance {
 
-    color:#061A2E;
-    -webkit-text-stroke:1.5px #C8CDD3;
-    text-shadow:0 0 10px rgba(200,205,211,0.5);
+    color:#ffffff;
 
 }
 
@@ -114,9 +111,9 @@ header {
 .dark-mode .path {
 
     color:#C8CDD3;
-    text-shadow:0 0 10px rgba(200,205,211,0.5);
 
 }
+
 
 
 
@@ -139,31 +136,35 @@ nav a {
 }
 
 
+
 nav a:hover {
 
-    color:var(--gold);
+    color:var(--accent);
 
 }
+
 
 
 
 #themeToggle {
 
+    background:var(--text);
+    color:var(--background);
     border:none;
-    background:var(--gold);
-    width:45px;
-    height:45px;
-    border-radius:50%;
+    border-radius:25px;
+    padding:10px 18px;
     cursor:pointer;
-    font-size:20px;
+    font-size:18px;
 
 }
 
 
 
-/* =====================
+
+
+/* =========================
    HERO
-===================== */
+========================= */
 
 
 .hero {
@@ -171,8 +172,8 @@ nav a:hover {
     display:flex;
     justify-content:space-between;
     align-items:center;
+    gap:60px;
     padding:90px 8%;
-    gap:50px;
 
 }
 
@@ -198,11 +199,13 @@ nav a:hover {
 
 .hero p {
 
+    color:var(--muted);
     font-size:19px;
     line-height:1.7;
     margin-bottom:40px;
 
 }
+
 
 
 
@@ -218,18 +221,19 @@ nav a:hover {
 
 .btn {
 
-    padding:18px 35px;
-    border-radius:35px;
+    padding:17px 35px;
+    border-radius:30px;
     text-decoration:none;
-    font-weight:bold;
+    font-weight:700;
     transition:0.3s;
 
 }
 
 
+
 .btn:hover {
 
-    transform:translateY(-5px);
+    transform:translateY(-4px);
 
 }
 
@@ -237,8 +241,8 @@ nav a:hover {
 
 .payroll-btn {
 
-    background:#C6A15B;
-    color:#0B3D2E;
+    background:var(--text);
+    color:var(--background);
 
 }
 
@@ -246,25 +250,28 @@ nav a:hover {
 
 .bookkeeping-btn {
 
-    border:2px solid #C6A15B;
-    color:white;
+    border:2px solid var(--text);
+    color:var(--text);
 
 }
 
 
 
 
-/* =====================
-   DASHBOARD CARD
-===================== */
+
+
+/* =========================
+   DASHBOARD PREVIEW
+========================= */
 
 
 .dashboard {
 
-    background:var(--section);
+    background:var(--card);
+    border:1px solid var(--border);
     padding:35px;
-    border-radius:25px;
     width:330px;
+    border-radius:25px;
     box-shadow:0 20px 40px var(--shadow);
 
 }
@@ -282,24 +289,27 @@ nav a:hover {
 
 .dashboard-item {
 
-    background:var(--card);
     padding:18px;
     margin:15px 0;
+    background:var(--section);
     border-radius:15px;
+    border:1px solid var(--border);
 
 }
 
 
 
-/* =====================
+
+
+/* =========================
    FEATURES
-===================== */
+========================= */
 
 
 .features {
 
     background:var(--section);
-    padding:70px 8%;
+    padding:80px 8%;
     text-align:center;
 
 }
@@ -310,7 +320,7 @@ nav a:hover {
 .about h2 {
 
     font-size:36px;
-    margin-bottom:40px;
+    margin-bottom:45px;
 
 }
 
@@ -320,7 +330,7 @@ nav a:hover {
 
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:25px;
+    gap:30px;
 
 }
 
@@ -329,9 +339,10 @@ nav a:hover {
 .card {
 
     background:var(--card);
-    padding:30px;
+    border:1px solid var(--border);
+    padding:35px;
     border-radius:20px;
-    box-shadow:0 10px 25px var(--shadow);
+    box-shadow:0 15px 30px var(--shadow);
 
 }
 
@@ -339,21 +350,32 @@ nav a:hover {
 
 .card h3 {
 
-    color:var(--gold);
     margin-bottom:15px;
+    color:var(--accent);
 
 }
 
 
 
-/* =====================
+
+.card p {
+
+    color:var(--muted);
+    line-height:1.6;
+
+}
+
+
+
+
+/* =========================
    ABOUT
-===================== */
+========================= */
 
 
 .about {
 
-    padding:70px 8%;
+    padding:80px 8%;
     text-align:center;
 
 }
@@ -364,22 +386,24 @@ nav a:hover {
 
     max-width:750px;
     margin:auto;
-    line-height:1.7;
+    color:var(--muted);
     font-size:18px;
+    line-height:1.7;
 
 }
 
 
 
 
-/* =====================
+/* =========================
    FOOTER
-===================== */
+========================= */
 
 
 footer {
 
-    background:#061A2E;
+    background:var(--section);
+    border-top:1px solid var(--border);
     padding:40px;
     text-align:center;
 
@@ -390,15 +414,14 @@ footer {
 footer p {
 
     margin-top:10px;
+    color:var(--muted);
 
 }
 
 
 
-/* =====================
-   MOBILE
-===================== */
 
+/* MOBILE */
 
 @media(max-width:900px){
 
@@ -419,6 +442,5 @@ footer p {
         font-size:38px;
 
     }
-
 
 }
