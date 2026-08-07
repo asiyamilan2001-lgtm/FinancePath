@@ -1,275 +1,175 @@
-/* =========================
-   FinancePath Main Styling
-   ========================= */
-
-
-:root {
-
-    --emerald: #006B54;
-    --gold: #C9A227;
-    --navy: #071A33;
-    --silver: #C5CBD3;
-
-    --background: #F8F7F2;
-    --text: #1E1E1E;
-    --card: #FFFFFF;
-
-}
-
-
-/* Dark Theme Variables */
-
-.dark-mode {
-
-    --background: #071A33;
-    --text: #F5F5F5;
-    --card: #102544;
-    --emerald: #00A77A;
-    --gold: #D4AF37;
-}
-
-
-
-/* =========================
-   General Styling
-   ========================= */
-
+/* FinancePath Main Styling */
 
 * {
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    font-family: "Segoe UI", Arial, sans-serif;
 }
-
 
 body {
-
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: var(--background);
-    color: var(--text);
-    transition: 0.3s ease;
-
+    background: #071a2b;
+    color: #ffffff;
+    min-height: 100vh;
 }
 
 
-
-a {
-
-    text-decoration: none;
-    color: inherit;
-
-}
-
-
+/* Header */
 
 header {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 30px 50px;
-
+    padding: 25px 8%;
+    background: #0b2438;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
 }
 
 
+.logo {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
 
-.logo h1 {
+.logo span {
+    color: #10b981;
+}
 
-    color: var(--emerald);
-    font-size: 42px;
-
+.logo {
+    color: #d4af37;
 }
 
 
-
-.logo p {
-
-    margin-top: 8px;
-    font-size: 16px;
-
-}
-
-
-
-/* =========================
-   Menu Button
-   ========================= */
-
-
-.menu-button {
-
-    position: fixed;
-
-    top: 25px;
-    right: 30px;
-
-    background: var(--gold);
-
+nav a {
     color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
 
-    border: none;
 
-    font-size: 25px;
-
-    width: 55px;
-    height: 55px;
-
-    border-radius: 50%;
-
-    cursor: pointer;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-
-    z-index: 1000;
-
+nav a:hover {
+    color: #d4af37;
 }
 
 
 
-/* =========================
-   Floating Menu
-   ========================= */
-
-
-.menu-panel {
-
-    position: fixed;
-
-    top: 90px;
-    right: 30px;
-
-    width: 260px;
-
-    background: var(--card);
-
-    padding: 25px;
-
-    border-radius: 20px;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-
-    display: none;
-
-    z-index: 999;
-
-}
-
-
-
-.menu-panel h2 {
-
-    color: var(--emerald);
-
-    margin-bottom: 20px;
-
-}
-
-
-
-.menu-panel a {
-
-    display: block;
-
-    padding: 12px 0;
-
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-
-}
-
-
-
-.menu-panel button {
-
-    margin-top: 20px;
-
-    width: 100%;
-
-    padding: 12px;
-
-    background: var(--gold);
-
-    color: white;
-
-    border: none;
-
-    border-radius: 10px;
-
-    cursor: pointer;
-
-}
-
-
-
-/* =========================
-   Hero Section
-   ========================= */
-
+/* Hero Section */
 
 .hero {
-
     text-align: center;
-
-    max-width: 900px;
-
-    margin: 70px auto;
-
-    padding: 20px;
-
+    padding: 90px 20px;
+    background:
+    linear-gradient(
+        rgba(7,26,43,0.9),
+        rgba(7,26,43,0.95)
+    );
 }
 
 
-
-.hero h2 {
-
-    font-size: 42px;
-
-    color: var(--emerald);
-
+.hero h1 {
+    font-size: 48px;
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.2;
 }
-
 
 
 .hero p {
-
+    max-width: 650px;
     margin: 25px auto;
-
-    font-size: 18px;
-
-    line-height: 1.6;
-
+    font-size: 20px;
+    color: #d5dbe1;
 }
 
 
 
-/* Buttons */
+/* Gold Buttons */
 
-
-.hero-buttons {
-
-    margin-top: 35px;
-
+.path-buttons {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
-
 
 
 .gold-button {
 
     display: inline-block;
 
-    background: var(--gold);
+    background:
+    linear-gradient(
+        135deg,
+        #fff3b0 0%,
+        #d4af37 35%,
+        #b8860b 70%,
+        #8a6500 100%
+    );
 
-    color: white;
+    color: #071a2b;
 
-    padding: 15px 30px;
+    padding: 16px 40px;
 
-    border-radius: 30px;
+    border-radius: 12px;
 
-    margin: 10px;
+    text-decoration: none;
 
-    font-weight: bold;
+    font-weight: 800;
+
+    font-size: 18px;
+
+    box-shadow:
+    0 8px 20px rgba(212,175,55,0.35),
+    inset 0 2px 5px rgba(255,255,255,0.7);
+
+    transition: 0.3s ease;
+
+}
+
+
+.gold-button:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+    0 15px 35px rgba(212,175,55,0.5),
+    inset 0 3px 8px rgba(255,255,255,0.8);
+
+}
+
+
+
+/* Feature Cards */
+
+.features {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+
+    padding: 60px 8%;
+
+}
+
+
+
+.card {
+
+    background: #102f46;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(16,185,129,0.25);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 
     transition: 0.3s;
 
@@ -277,64 +177,29 @@ header {
 
 
 
-.gold-button:hover {
+.card:hover {
 
-    transform: translateY(-3px);
+    transform: translateY(-8px);
 
-}
-
-
-
-/* =========================
-   Learning Cards
-   ========================= */
-
-
-.learning-paths {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 30px;
-
-    padding: 40px;
-
-    flex-wrap: wrap;
+    border-color: #d4af37;
 
 }
 
 
 
-.path-card {
+.card h2 {
 
-    background: var(--card);
+    color: #d4af37;
 
-    width: 380px;
-
-    padding: 35px;
-
-    border-radius: 25px;
-
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
 
 }
 
 
 
-.path-card h3 {
+.card p {
 
-    color: var(--emerald);
-
-    font-size: 25px;
-
-}
-
-
-
-.path-card p {
-
-    margin: 20px 0;
+    color: #d5dbe1;
 
     line-height: 1.6;
 
@@ -342,90 +207,7 @@ header {
 
 
 
-.path-card li {
-
-    margin: 10px 0;
-
-}
-
-
-
-.path-card a {
-
-    display: inline-block;
-
-    margin-top: 20px;
-
-    color: var(--gold);
-
-    font-weight: bold;
-
-}
-
-
-
-/* =========================
-   Progress
-   ========================= */
-
-
-.progress-preview {
-
-    text-align: center;
-
-    padding: 60px 20px;
-
-}
-
-
-
-.progress-box {
-
-    background: var(--card);
-
-    max-width: 450px;
-
-    margin: 30px auto;
-
-    padding: 30px;
-
-    border-radius: 20px;
-
-}
-
-
-
-.progress-bar {
-
-    height: 20px;
-
-    background: #ddd;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    margin: 20px 0;
-
-}
-
-
-
-.progress-fill {
-
-    height: 100%;
-
-    width: 10%;
-
-    background: var(--emerald);
-
-}
-
-
-
-/* =========================
-   Footer
-   ========================= */
+/* Footer */
 
 
 footer {
@@ -434,47 +216,38 @@ footer {
 
     padding: 30px;
 
-    font-size: 14px;
+    background: #0b2438;
+
+    color: #bfc8d1;
 
 }
 
 
 
-/* =========================
-   Mobile
-   ========================= */
-
+/* Mobile */
 
 @media(max-width:700px){
 
+    header {
 
-header {
+        flex-direction: column;
 
-    padding: 25px;
+        gap:20px;
 
-}
-
-
-
-.logo h1 {
-
-    font-size: 32px;
-
-}
+    }
 
 
-.hero h2 {
+    nav a {
 
-    font-size: 32px;
+        margin:10px;
 
-}
+    }
 
 
-.path-card {
+    .hero h1 {
 
-    width: 100%;
+        font-size:36px;
 
-}
-
+    }
 
 }
