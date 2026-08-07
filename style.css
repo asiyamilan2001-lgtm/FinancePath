@@ -2,28 +2,32 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
 
 :root {
-    --background: #f8f7f2;
-    --text: #1b1b1b;
+
+    --background: #f8f5ed;
+    --text: #14201b;
     --primary: #047857;
-    --accent: #d4af37;
-    --card: white;
-    --shadow: rgba(0,0,0,0.15);
+    --secondary: #d4af37;
+    --card: #ffffff;
+    --nav: rgba(255,255,255,0.8);
+    --shadow: rgba(0,0,0,0.12);
+
 }
 
 
 .dark-mode {
 
-    --background: #071a33;
-    --text: #f5f5f5;
-    --primary: #0b2a52;
-    --accent: #c0c0c0;
-    --card: #10284a;
-    --shadow: rgba(255,255,255,0.1);
+    --background: #07182e;
+    --text: #f5f7fa;
+    --primary: #123c70;
+    --secondary: #c9c9c9;
+    --card: #102945;
+    --nav: rgba(10,25,45,0.8);
+    --shadow: rgba(255,255,255,0.08);
 
 }
 
@@ -33,7 +37,6 @@ body {
 
     background: var(--background);
     color: var(--text);
-    min-height: 100vh;
     transition: 0.4s;
 
 }
@@ -43,9 +46,11 @@ body {
 header {
 
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
     padding:25px 8%;
+    background:var(--nav);
+    backdrop-filter:blur(10px);
 
 }
 
@@ -53,10 +58,35 @@ header {
 
 .logo {
 
-    font-size:28px;
-    font-weight:bold;
-    color:var(--primary);
-    letter-spacing:2px;
+    font-size:32px;
+    font-weight:800;
+    letter-spacing:1px;
+
+}
+
+
+.logo span {
+
+    color:var(--secondary);
+
+}
+
+
+
+nav {
+
+    display:flex;
+    gap:25px;
+
+}
+
+
+
+nav a {
+
+    text-decoration:none;
+    color:var(--text);
+    font-weight:600;
 
 }
 
@@ -64,22 +94,33 @@ header {
 
 #themeToggle {
 
-    padding:12px 20px;
     border:none;
-    border-radius:25px;
-    background:var(--accent);
-    color:#111;
+    background:var(--secondary);
+    padding:12px 16px;
+    border-radius:50%;
     cursor:pointer;
-    font-weight:bold;
+    font-size:18px;
 
 }
 
 
 
+
 .hero {
 
-    text-align:center;
-    padding:50px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 8%;
+    gap:40px;
+
+}
+
+
+
+.hero-text {
+
+    max-width:650px;
 
 }
 
@@ -87,8 +128,8 @@ header {
 
 .hero h1 {
 
-    font-size:42px;
-    margin-bottom:20px;
+    font-size:48px;
+    margin-bottom:25px;
 
 }
 
@@ -97,50 +138,164 @@ header {
 .hero p {
 
     font-size:18px;
-    max-width:650px;
-    margin:auto;
-    line-height:1.6;
+    line-height:1.7;
+    margin-bottom:35px;
 
 }
 
 
 
-.path-buttons {
+.hero-buttons {
 
-    margin-top:50px;
     display:flex;
-    justify-content:center;
-    gap:30px;
+    gap:20px;
     flex-wrap:wrap;
 
 }
 
 
 
-.path-card {
+.main-btn {
 
+    padding:16px 30px;
+    border-radius:30px;
     text-decoration:none;
-    color:var(--text);
-    background:var(--card);
-    width:320px;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 10px 25px var(--shadow);
+    font-weight:bold;
+    color:white;
     transition:0.3s;
 
 }
 
 
 
-.path-card:hover {
+.payroll {
 
-    transform:translateY(-10px);
+    background:var(--primary);
 
 }
 
 
 
-.path-card:first-child {
+.bookkeeping {
+
+    background:var(--secondary);
+    color:#222;
+
+}
+
+
+
+.main-btn:hover {
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+.hero-card {
+
+    background:var(--card);
+    padding:45px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 15px 30px var(--shadow);
+    min-width:300px;
+
+}
+
+
+
+.hero-card h2 {
+
+    color:var(--primary);
+    font-size:30px;
+
+}
+
+
+
+.icons {
+
+    font-size:45px;
+    margin:25px 0;
+
+}
+
+
+
+
+
+.features,
+.paths,
+.about {
+
+    padding:70px 8%;
+    text-align:center;
+
+}
+
+
+
+.features h2,
+.paths h2,
+.about h2 {
+
+    font-size:34px;
+    margin-bottom:40px;
+
+}
+
+
+
+.feature-grid,
+.path-grid {
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+
+}
+
+
+
+.feature-card,
+.path-box {
+
+    background:var(--card);
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 25px var(--shadow);
+
+}
+
+
+
+.feature-card h3,
+.path-box h3 {
+
+    margin-bottom:15px;
+
+}
+
+
+
+.path-box button {
+
+    margin-top:25px;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:var(--primary);
+    color:white;
+    cursor:pointer;
+
+}
+
+
+
+.payroll-box {
 
     border-top:6px solid var(--primary);
 
@@ -148,25 +303,57 @@ header {
 
 
 
-.path-card:last-child {
+.book-box {
 
-    border-top:6px solid var(--accent);
+    border-top:6px solid var(--secondary);
+
+}
+
+
+
+.about p {
+
+    max-width:700px;
+    margin:auto;
+    line-height:1.7;
 
 }
 
-
-
-.path-card h2 {
-
-    margin:20px 0 10px;
-
-}
 
 
 
 footer {
 
     text-align:center;
-    padding:30px;
+    padding:40px;
+    background:var(--primary);
+    color:white;
+
+}
+
+
+
+
+@media(max-width:900px){
+
+    .hero {
+
+        flex-direction:column;
+
+    }
+
+
+    nav {
+
+        display:none;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:36px;
+
+    }
 
 }
