@@ -6,28 +6,30 @@
 }
 
 
+/* LIGHT THEME */
+
 :root {
 
-    --background: #f8f5ed;
-    --text: #14201b;
-    --primary: #047857;
-    --secondary: #d4af37;
-    --card: #ffffff;
-    --nav: rgba(255,255,255,0.8);
-    --shadow: rgba(0,0,0,0.12);
+    --background: #0B3D2E;
+    --section: #145A43;
+    --card: #174F3B;
+    --text: #F7F7F2;
+    --gold: #C6A15B;
+    --shadow: rgba(0,0,0,0.35);
 
 }
 
 
+/* DARK THEME */
+
 .dark-mode {
 
-    --background: #07182e;
-    --text: #f5f7fa;
-    --primary: #123c70;
-    --secondary: #c9c9c9;
-    --card: #102945;
-    --nav: rgba(10,25,45,0.8);
-    --shadow: rgba(255,255,255,0.08);
+    --background: #061A2E;
+    --section: #0D2945;
+    --card: #102F4F;
+    --text: #F5F5F5;
+    --gold: #C8CDD3;
+    --shadow: rgba(0,0,0,0.5);
 
 }
 
@@ -43,13 +45,16 @@ body {
 
 
 
+/* HEADER */
+
+
 header {
 
     display:flex;
     align-items:center;
     justify-content:space-between;
     padding:25px 8%;
-    background:var(--nav);
+    background:rgba(0,0,0,0.15);
     backdrop-filter:blur(10px);
 
 }
@@ -58,25 +63,48 @@ header {
 
 .logo {
 
-    font-size:32px;
-    font-weight:800;
-    letter-spacing:1px;
+    font-size:34px;
+    font-weight:900;
+    letter-spacing:2px;
 
 }
 
 
-.logo span {
+.finance {
 
-    color:var(--secondary);
+    color:#0B3D2E;
 
 }
+
+
+.path {
+
+    color:#C6A15B;
+
+}
+
+
+
+.dark-mode .finance {
+
+    color:#061A2E;
+
+}
+
+
+.dark-mode .path {
+
+    color:#C8CDD3;
+
+}
+
 
 
 
 nav {
 
     display:flex;
-    gap:25px;
+    gap:30px;
 
 }
 
@@ -84,26 +112,39 @@ nav {
 
 nav a {
 
-    text-decoration:none;
     color:var(--text);
+    text-decoration:none;
     font-weight:600;
 
 }
 
 
 
-#themeToggle {
+nav a:hover {
 
-    border:none;
-    background:var(--secondary);
-    padding:12px 16px;
-    border-radius:50%;
-    cursor:pointer;
-    font-size:18px;
+    color:var(--gold);
 
 }
 
 
+
+
+#themeToggle {
+
+    border:none;
+    background:var(--gold);
+    color:#111;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:20px;
+
+}
+
+
+
+/* HERO */
 
 
 .hero {
@@ -111,14 +152,14 @@ nav a {
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:80px 8%;
-    gap:40px;
+    padding:90px 8%;
+    gap:50px;
 
 }
 
 
 
-.hero-text {
+.hero-content {
 
     max-width:650px;
 
@@ -128,7 +169,8 @@ nav a {
 
 .hero h1 {
 
-    font-size:48px;
+    font-size:50px;
+    line-height:1.2;
     margin-bottom:25px;
 
 }
@@ -137,15 +179,16 @@ nav a {
 
 .hero p {
 
-    font-size:18px;
+    font-size:19px;
     line-height:1.7;
-    margin-bottom:35px;
+    margin-bottom:40px;
 
 }
 
 
 
-.hero-buttons {
+
+.buttons {
 
     display:flex;
     gap:20px;
@@ -155,37 +198,37 @@ nav a {
 
 
 
-.main-btn {
+.btn {
 
-    padding:16px 30px;
-    border-radius:30px;
+    padding:18px 35px;
+    border-radius:35px;
     text-decoration:none;
     font-weight:bold;
-    color:white;
     transition:0.3s;
 
 }
 
 
 
-.payroll {
+.payroll-btn {
 
-    background:var(--primary);
-
-}
-
-
-
-.bookkeeping {
-
-    background:var(--secondary);
-    color:#222;
+    background:var(--gold);
+    color:#0B3D2E;
 
 }
 
 
 
-.main-btn:hover {
+.bookkeeping-btn {
+
+    border:2px solid var(--gold);
+    color:var(--text);
+
+}
+
+
+
+.btn:hover {
 
     transform:translateY(-5px);
 
@@ -194,41 +237,101 @@ nav a {
 
 
 
-.hero-card {
+
+/* DASHBOARD */
+
+
+.dashboard {
+
+    background:var(--section);
+    padding:35px;
+    border-radius:25px;
+    width:320px;
+    box-shadow:0 15px 30px var(--shadow);
+
+}
+
+
+
+.dashboard h2 {
+
+    text-align:center;
+    margin-bottom:25px;
+
+}
+
+
+
+.dashboard-item {
 
     background:var(--card);
-    padding:45px;
-    border-radius:25px;
+    padding:18px;
+    margin:15px 0;
+    border-radius:15px;
+
+}
+
+
+
+
+
+/* FEATURES */
+
+
+.features {
+
+    padding:70px 8%;
+    background:var(--section);
     text-align:center;
-    box-shadow:0 15px 30px var(--shadow);
-    min-width:300px;
 
 }
 
 
 
-.hero-card h2 {
+.features h2,
+.about h2 {
 
-    color:var(--primary);
-    font-size:30px;
-
-}
-
-
-
-.icons {
-
-    font-size:45px;
-    margin:25px 0;
+    font-size:35px;
+    margin-bottom:40px;
 
 }
 
 
 
+.cards {
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+
+}
 
 
-.features,
-.paths,
+
+.card {
+
+    background:var(--card);
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px var(--shadow);
+
+}
+
+
+
+.card h3 {
+
+    margin-bottom:15px;
+    color:var(--gold);
+
+}
+
+
+
+
+/* ABOUT */
+
+
 .about {
 
     padding:70px 8%;
@@ -237,84 +340,11 @@ nav a {
 }
 
 
-
-.features h2,
-.paths h2,
-.about h2 {
-
-    font-size:34px;
-    margin-bottom:40px;
-
-}
-
-
-
-.feature-grid,
-.path-grid {
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-
-}
-
-
-
-.feature-card,
-.path-box {
-
-    background:var(--card);
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 10px 25px var(--shadow);
-
-}
-
-
-
-.feature-card h3,
-.path-box h3 {
-
-    margin-bottom:15px;
-
-}
-
-
-
-.path-box button {
-
-    margin-top:25px;
-    padding:12px 25px;
-    border:none;
-    border-radius:25px;
-    background:var(--primary);
-    color:white;
-    cursor:pointer;
-
-}
-
-
-
-.payroll-box {
-
-    border-top:6px solid var(--primary);
-
-}
-
-
-
-.book-box {
-
-    border-top:6px solid var(--secondary);
-
-}
-
-
-
 .about p {
 
     max-width:700px;
     margin:auto;
+    font-size:18px;
     line-height:1.7;
 
 }
@@ -322,12 +352,25 @@ nav a {
 
 
 
+/* FOOTER */
+
+
 footer {
 
-    text-align:center;
     padding:40px;
-    background:var(--primary);
-    color:white;
+    text-align:center;
+    background:#061A2E;
+    font-size:20px;
+
+}
+
+
+
+
+footer p {
+
+    margin-top:10px;
+    font-size:15px;
 
 }
 
@@ -336,24 +379,18 @@ footer {
 
 @media(max-width:900px){
 
-    .hero {
-
-        flex-direction:column;
-
+    nav {
+        display:none;
     }
 
 
-    nav {
-
-        display:none;
-
+    .hero {
+        flex-direction:column;
     }
 
 
     .hero h1 {
-
-        font-size:36px;
-
+        font-size:38px;
     }
 
 }
