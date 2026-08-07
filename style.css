@@ -6,21 +6,26 @@
 }
 
 
-/* LIGHT THEME */
+/* =====================
+   LIGHT THEME
+===================== */
 
 :root {
 
     --background: #0B3D2E;
     --section: #145A43;
     --card: #174F3B;
-    --text: #F7F7F2;
+    --text: #F8F8F3;
     --gold: #C6A15B;
     --shadow: rgba(0,0,0,0.35);
 
 }
 
 
-/* DARK THEME */
+
+/* =====================
+   DARK THEME
+===================== */
 
 .dark-mode {
 
@@ -45,16 +50,18 @@ body {
 
 
 
-/* HEADER */
+/* =====================
+   HEADER
+===================== */
 
 
 header {
 
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
     padding:25px 8%;
-    background:rgba(0,0,0,0.15);
+    background:rgba(0,0,0,0.18);
     backdrop-filter:blur(10px);
 
 }
@@ -63,16 +70,22 @@ header {
 
 .logo {
 
-    font-size:34px;
+    font-size:38px;
     font-weight:900;
     letter-spacing:2px;
 
 }
 
 
+
+/* LOGO COLOURS */
+
+
 .finance {
 
     color:#0B3D2E;
+    -webkit-text-stroke:1.5px #C6A15B;
+    text-shadow:0 0 10px rgba(198,161,91,0.5);
 
 }
 
@@ -80,14 +93,20 @@ header {
 .path {
 
     color:#C6A15B;
+    text-shadow:0 0 10px rgba(198,161,91,0.5);
 
 }
 
 
 
+/* DARK LOGO */
+
+
 .dark-mode .finance {
 
     color:#061A2E;
+    -webkit-text-stroke:1.5px #C8CDD3;
+    text-shadow:0 0 10px rgba(200,205,211,0.5);
 
 }
 
@@ -95,6 +114,7 @@ header {
 .dark-mode .path {
 
     color:#C8CDD3;
+    text-shadow:0 0 10px rgba(200,205,211,0.5);
 
 }
 
@@ -112,12 +132,11 @@ nav {
 
 nav a {
 
-    color:var(--text);
     text-decoration:none;
+    color:var(--text);
     font-weight:600;
 
 }
-
 
 
 nav a:hover {
@@ -128,12 +147,10 @@ nav a:hover {
 
 
 
-
 #themeToggle {
 
     border:none;
     background:var(--gold);
-    color:#111;
     width:45px;
     height:45px;
     border-radius:50%;
@@ -144,7 +161,9 @@ nav a:hover {
 
 
 
-/* HERO */
+/* =====================
+   HERO
+===================== */
 
 
 .hero {
@@ -169,7 +188,7 @@ nav a:hover {
 
 .hero h1 {
 
-    font-size:50px;
+    font-size:52px;
     line-height:1.2;
     margin-bottom:25px;
 
@@ -184,7 +203,6 @@ nav a:hover {
     margin-bottom:40px;
 
 }
-
 
 
 
@@ -209,25 +227,6 @@ nav a:hover {
 }
 
 
-
-.payroll-btn {
-
-    background:var(--gold);
-    color:#0B3D2E;
-
-}
-
-
-
-.bookkeeping-btn {
-
-    border:2px solid var(--gold);
-    color:var(--text);
-
-}
-
-
-
 .btn:hover {
 
     transform:translateY(-5px);
@@ -236,9 +235,28 @@ nav a:hover {
 
 
 
+.payroll-btn {
+
+    background:#C6A15B;
+    color:#0B3D2E;
+
+}
 
 
-/* DASHBOARD */
+
+.bookkeeping-btn {
+
+    border:2px solid #C6A15B;
+    color:white;
+
+}
+
+
+
+
+/* =====================
+   DASHBOARD CARD
+===================== */
 
 
 .dashboard {
@@ -246,8 +264,8 @@ nav a:hover {
     background:var(--section);
     padding:35px;
     border-radius:25px;
-    width:320px;
-    box-shadow:0 15px 30px var(--shadow);
+    width:330px;
+    box-shadow:0 20px 40px var(--shadow);
 
 }
 
@@ -273,15 +291,15 @@ nav a:hover {
 
 
 
-
-
-/* FEATURES */
+/* =====================
+   FEATURES
+===================== */
 
 
 .features {
 
-    padding:70px 8%;
     background:var(--section);
+    padding:70px 8%;
     text-align:center;
 
 }
@@ -291,7 +309,7 @@ nav a:hover {
 .features h2,
 .about h2 {
 
-    font-size:35px;
+    font-size:36px;
     margin-bottom:40px;
 
 }
@@ -321,15 +339,16 @@ nav a:hover {
 
 .card h3 {
 
-    margin-bottom:15px;
     color:var(--gold);
+    margin-bottom:15px;
 
 }
 
 
 
-
-/* ABOUT */
+/* =====================
+   ABOUT
+===================== */
 
 
 .about {
@@ -340,41 +359,45 @@ nav a:hover {
 }
 
 
+
 .about p {
 
-    max-width:700px;
+    max-width:750px;
     margin:auto;
-    font-size:18px;
     line-height:1.7;
+    font-size:18px;
 
 }
 
 
 
 
-/* FOOTER */
+/* =====================
+   FOOTER
+===================== */
 
 
 footer {
 
+    background:#061A2E;
     padding:40px;
     text-align:center;
-    background:#061A2E;
-    font-size:20px;
 
 }
-
 
 
 
 footer p {
 
     margin-top:10px;
-    font-size:15px;
 
 }
 
 
+
+/* =====================
+   MOBILE
+===================== */
 
 
 @media(max-width:900px){
@@ -385,12 +408,17 @@ footer p {
 
 
     .hero {
+
         flex-direction:column;
+
     }
 
 
     .hero h1 {
+
         font-size:38px;
+
     }
+
 
 }
