@@ -1,453 +1,296 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    color: #171717;
-    line-height: 1.6;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 22px 6%;
-    border-bottom: 1px solid #e5e5e5;
-    background: #ffffff;
-}
-
-.brand-area {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-}
-
-.logo {
-    font-size: 25px;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-
-.finance {
-    color: #171717;
-}
-
-.path {
-    color: #b08a2e;
-}
-
-.brand-area p {
-    color: #777;
-    font-size: 13px;
-}
-
-.nav-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-}
-
-nav > a,
-.dropdown > a {
-    text-decoration: none;
-    color: #222;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.dropdown {
-    position: relative;
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    width: 210px;
-    background: #ffffff;
-    border: 1px solid #e4e4e4;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-    padding: 15px 0;
-    display: none;
-    z-index: 100;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu h4 {
-    padding: 5px 18px 12px;
-    font-size: 13px;
-    color: #b08a2e;
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 10px 18px;
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-}
-
-.dropdown-menu a:hover {
-    background: #f7f7f7;
-}
-
-#themeToggle {
-    border: none;
-    background: transparent;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    text-align: center;
-    padding: 95px 20px;
-    background: #fafafa;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    max-width: 650px;
-    margin: auto;
-    color: #666;
-    font-size: 17px;
-}
-
-
-/* =========================
-   PATHS
-========================= */
-
-.paths {
-    max-width: 1100px;
-    margin: 80px auto;
-    padding: 0 25px;
-}
-
-.paths h2,
-.toolkit h2,
-.why h2 {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 35px;
-}
-
-.path-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    padding: 30px;
-    margin-bottom: 20px;
-    border: 1px solid #e5e5e5;
-    border-radius: 12px;
-    background: #ffffff;
-}
-
-.path-card h3 {
-    font-size: 21px;
-    margin-bottom: 8px;
-}
-
-.path-card p {
-    color: #666;
-    max-width: 700px;
-}
-
-.path-card a {
-    text-decoration: none;
-    color: #b08a2e;
-    font-weight: 700;
-    white-space: nowrap;
-}
-
-
-/* =========================
-   TOOLKIT
-========================= */
-
-.toolkit {
-    background: #fafafa;
-    padding: 80px 6%;
-}
-
-.tool-grid {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.tool-grid > div {
-    background: #ffffff;
-    padding: 30px 20px;
-    border: 1px solid #e5e5e5;
-    border-radius: 12px;
-    text-align: center;
-}
-
-.tool-grid h3 {
-    margin: 10px 0 5px;
-}
-
-.tool-grid p {
-    color: #666;
-    font-size: 14px;
-}
-
-
-/* =========================
-   WHY
-========================= */
-
-.why {
-    padding: 80px 20px;
-}
-
-.why-list {
-    text-align: center;
-}
-
-.why-list p {
-    margin: 10px;
-    color: #555;
-}
-
-
-/* =========================
-   PAYROLL MODULES PAGE
-========================= */
-
-.modules-page {
-    min-height: calc(100vh - 150px);
-    padding: 75px 6% 100px;
-    background: #fafafa;
-}
-
-.page-heading {
-    max-width: 900px;
-    margin: 0 auto 55px;
-    text-align: center;
-}
-
-.eyebrow {
-    color: #b08a2e;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-}
-
-.page-heading h1 {
-    font-size: 44px;
-    margin-bottom: 15px;
-}
-
-.page-heading > p:last-child {
-    color: #666;
-    max-width: 650px;
-    margin: auto;
-    font-size: 16px;
-}
-
-.modules-grid {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.module-card {
-    position: relative;
-    background: #ffffff;
-    border: 1px solid #e3e3e3;
-    border-radius: 14px;
-    padding: 30px;
-    min-height: 280px;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.module-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-.module-number {
-    color: #b08a2e;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 18px;
-}
-
-.module-card h2 {
-    font-size: 21px;
-    margin-bottom: 12px;
-}
-
-.module-card p {
-    color: #666;
-    font-size: 14px;
-    margin-bottom: 25px;
-}
-
-.module-card a {
-    margin-top: auto;
-    text-decoration: none;
-    color: #b08a2e;
-    font-weight: 700;
-    font-size: 14px;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    padding: 35px 6%;
-    border-top: 1px solid #e5e5e5;
-    background: #ffffff;
-}
-
-footer p {
-    color: #777;
-    font-size: 13px;
-    margin-top: 5px;
-}
-
-
-/* =========================
-   DARK MODE
-========================= */
-
-body.dark {
-    background: #111111;
-    color: #eeeeee;
-}
-
-body.dark header,
-body.dark footer,
-body.dark .module-card,
-body.dark .path-card,
-body.dark .tool-grid > div,
-body.dark .dropdown-menu {
-    background: #171717;
-    border-color: #333333;
-}
-
-body.dark .finance,
-body.dark nav > a,
-body.dark .dropdown > a,
-body.dark .dropdown-menu a {
-    color: #eeeeee;
-}
-
-body.dark .hero,
-body.dark .modules-page,
-body.dark .toolkit {
-    background: #111111;
-}
-
-body.dark .hero p,
-body.dark .path-card p,
-body.dark .tool-grid p,
-body.dark .module-card p,
-body.dark .page-heading > p:last-child,
-body.dark .why-list p,
-body.dark .brand-area p,
-body.dark footer p {
-    color: #aaaaaa;
-}
-
-body.dark .dropdown-menu a:hover {
-    background: #222222;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 900px) {
-
-    header {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .brand-area {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
-    }
-
-    nav {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .modules-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .tool-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .page-heading h1 {
-        font-size: 34px;
-    }
-
-    .modules-grid,
-    .tool-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .path-card {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-container {
-        flex-direction: column;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FinancePath | Payroll Modules</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="brand-area">
+
+<div class="logo">
+<span class="finance">FINANCE</span><span class="path">PATH</span>
+</div>
+
+<p>Professional Finance Revision & Practice</p>
+
+</div>
+
+<div class="nav-container">
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<div class="dropdown">
+
+<a href="#">Payroll Path ▾</a>
+
+<div class="dropdown-menu">
+
+<h4>Payroll Path</h4>
+
+<a href="payroll-modules.html">📚 Modules</a>
+<a href="#">✏️ Exercises</a>
+<a href="#">🧮 Calculators</a>
+<a href="#">💻 Simulator</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<a href="#">Bookkeeping Path ▾</a>
+
+<div class="dropdown-menu">
+
+<h4>Bookkeeping Path</h4>
+
+<a href="#">📚 Modules</a>
+<a href="#">✏️ Exercises</a>
+<a href="#">📊 Practice Tasks</a>
+<a href="#">💻 Simulator</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<a href="#">Tools ▾</a>
+
+<div class="dropdown-menu">
+
+<h4>Finance Toolkit</h4>
+
+<a href="#">🧮 Calculators</a>
+<a href="#">📄 Templates</a>
+<a href="#">📖 Glossary</a>
+<a href="#">📊 Reference Guides</a>
+
+</div>
+
+</div>
+
+</nav>
+
+<button id="themeToggle">🌙</button>
+
+</div>
+
+</header>
+
+
+<main class="modules-page">
+
+<section class="page-heading">
+
+<p class="eyebrow">PAYROLL PATH</p>
+
+<h1>Payroll Modules</h1>
+
+<p>
+Build your payroll knowledge step by step, from the fundamentals
+through to processing a complete payroll.
+</p>
+
+</section>
+
+
+<section class="modules-grid">
+
+
+<div class="module-card">
+
+<span class="module-number">01</span>
+
+<h2>Payroll Fundamentals</h2>
+
+<p>
+Understand how payroll works, key terminology,
+payroll responsibilities and the payroll cycle.
+</p>
+
+<a href="payroll-fundamentals.html">
+Start Module →
+</a>
+
+</div>
+
+
+<div class="module-card">
+
+<span class="module-number">02</span>
+
+<h2>PAYE & Income Tax</h2>
+
+<p>
+Learn how PAYE works and how income tax is
+calculated and deducted from employees.
+</p>
+
+<a href="#">
+Coming Soon →
+</a>
+
+</div>
+
+
+<div class="module-card">
+
+<span class="module-number">03</span>
+
+<h2>National Insurance</h2>
+
+<p>
+Understand National Insurance contributions,
+categories, thresholds and deductions.
+</p>
+
+<a href="#">
+Coming Soon →
+</a>
+
+</div>
+
+
+<div class="module-card">
+
+<span class="module-number">04</span>
+
+<h2>Tax Codes</h2>
+
+<p>
+Learn how tax codes work and how they affect
+the amount of tax deducted from an employee.
+</p>
+
+<a href="#">
+Coming Soon →
+</a>
+
+</div>
+
+
+<div class="module-card">
+
+<span class="module-number">05</span>
+
+<h2>Payslips</h2>
+
+<p>
+Understand payslip information and how gross
+pay becomes an employee's net pay.
+</p>
+
+<a href="#">
+Coming Soon →
+</a>
+
+</div>
+
+
+<div class="module-card">
+
+<span class="module-number">06</span>
+
+<h2>Statutory Payments</h2>
+
+<p>
+Learn about statutory payments such as sick pay,
+maternity pay and other employee entitlements.
+</p>
+
+<a href="#">
+Coming Soon →
+</a>
+
+</div>
+
+
+<div class="module-card">
+
+<span class="module-number">07</span>
+
+<h2>Workplace Pensions</h2>
+
+<p>
+Understand automatic enrolment, pension
+contributions and employer responsibilities.
+</p>
+
+<a href="#">
+Coming Soon →
+</a>
+
+</div>
+
+
+<div class="module-card">
+
+<span class="module-number">08</span>
+
+<h2>Payroll Processing</h2>
+
+<p>
+Put your knowledge together and learn the
+steps involved in processing payroll.
+</p>
+
+<a href="#">
+Coming Soon →
+</a>
+
+</div>
+
+
+<div class="module-card">
+
+<span class="module-number">09</span>
+
+<h2>Payroll Year End</h2>
+
+<p>
+Learn about year-end procedures, reporting and
+important payroll records.
+</p>
+
+<a href="#">
+Coming Soon →
+</a>
+
+</div>
+
+
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="logo">
+<span class="finance">FINANCE</span><span class="path">PATH</span>
+</div>
+
+<p>Professional Finance Revision & Practice</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
